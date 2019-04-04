@@ -1,5 +1,12 @@
+/* eslint-disable vue/valid-v-on */
 <template>
-  <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute light temporary>
+  <v-navigation-drawer
+    v-model="drawer"
+    :mini-variant="mini"
+    absolute
+    light
+    temporary
+  >
     <v-list>
       <router-link to="/">
         <v-list-tile @click>
@@ -36,15 +43,22 @@
             <v-list-tile-title>Configuration</v-list-tile-title>
           </v-list-tile>
         </template>
-        <v-list-tile @click>
-          <v-list-tile-title>Logger</v-list-tile-title>
-        </v-list-tile>
-        <v-list-tile @click>
-          <v-list-tile-title>All Meter</v-list-tile-title>
-        </v-list-tile>
-        <v-list-tile @click>
-          <v-list-tile-title>All Sensor</v-list-tile-title>
-        </v-list-tile>
+
+        <router-link to="/loggerconfig">
+          <v-list-tile @click>
+            <v-list-tile-title>Datalogger</v-list-tile-title>
+          </v-list-tile>
+        </router-link>
+        <router-link to="/allmeter">
+          <v-list-tile @click>
+            <v-list-tile-title>All Meter</v-list-tile-title>
+          </v-list-tile>
+        </router-link>
+        <router-link to="/allsensor">
+          <v-list-tile @click>
+            <v-list-tile-title>All Sensor</v-list-tile-title>
+          </v-list-tile>
+        </router-link>
       </v-list-group>
 
       <router-link to="/about">

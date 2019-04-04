@@ -1,10 +1,9 @@
-/* eslint-disable vue/valid-v-on */
 <template>
-  <v-app>
-    <v-toolbar app>
+  <v-app id="app">
+    <v-toolbar app color="blue darken-3" dark>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-img :src="require('./assets/logo.png')" contain height="30"></v-img>
-      <v-toolbar-title class="headline text-uppercase">
+      <v-toolbar-title class="text-uppercase">
         <span class="font-weight-light">&#160; NB-IOT DATALOGGER</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
